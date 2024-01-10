@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
     yearsUI.value = values.years ; 
     let rateUI = document.getElementById("loan-rate");
     rateUI.value = values.rate ;
+    update();
   }
   
   // Get the current values from the UI
@@ -44,7 +45,7 @@ window.addEventListener('DOMContentLoaded', function() {
     let rateOfLoan = ((values.rate/12)/100);
   let totalNumberOfPayments = (values.years*12);
   let principleAmount = (values.amount);
-  return ((principleAmount * rateOfLoan)/(1-Math.pow(1+rateOfLoan), -totalNumberOfPayments)).toFixed(2);
+  return ((principleAmount * rateOfLoan)/(1-Math.pow((1+rateOfLoan), -totalNumberOfPayments))).toFixed(2);
   }
   
   // Given a string representing the monthly payment value,
