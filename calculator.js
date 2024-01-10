@@ -33,6 +33,8 @@ window.addEventListener('DOMContentLoaded', function() {
   // Get the current values from the UI
   // Update the monthly payment
   function update() {
+    let updatedUIValues = getCurrentUIValues();
+  updateMonthly(calculateMonthlyPayment(updatedUIValues));
   }
   
   // Given an object of values (a value has amount, years and rate ),
