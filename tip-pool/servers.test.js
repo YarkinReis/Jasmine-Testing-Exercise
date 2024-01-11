@@ -19,7 +19,7 @@ it('should update table on updateServerTable()',function(){
   console.log(currentList[2]);
   expect( currentList.length).toEqual(2);
   expect( currentList[0].innerText).toEqual("Alice");
-  expect( currentList[1].innerText).toEqual("$0.00");
+  expect( currentList[1].innerText).toEqual("$10.00");
 
 })
 
